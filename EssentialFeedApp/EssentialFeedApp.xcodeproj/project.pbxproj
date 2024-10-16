@@ -47,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B48DC9942CC0662800C899FA /* Exceptions for "EssentialFeedApp" folder in "EssentialFeedApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B49DE8C12CBD9F04000C64F5 /* EssentialFeedApp */;
+		};
 		B4F559742CBFE31C00B0E9CC /* Exceptions for "EssentialFeedAppTests" folder in "EssentialFeedAppTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -66,6 +73,9 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B49DE8C42CBD9F04000C64F5 /* EssentialFeedApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B48DC9942CC0662800C899FA /* Exceptions for "EssentialFeedApp" folder in "EssentialFeedApp" target */,
+			);
 			path = EssentialFeedApp;
 			sourceTree = "<group>";
 		};
@@ -143,7 +153,6 @@
 			buildConfigurationList = B49DE8EB2CBD9F08000C64F5 /* Build configuration list for PBXNativeTarget "EssentialFeedApp" */;
 			buildPhases = (
 				B49DE8BE2CBD9F04000C64F5 /* Sources */,
-				B445A5B82CBFEBAA009B75EF /* ShellScript */,
 				B49DE8BF2CBD9F04000C64F5 /* Frameworks */,
 				B49DE8C02CBD9F04000C64F5 /* Resources */,
 				B433355B2CBDA84D00612107 /* Embed Frameworks */,
@@ -168,7 +177,6 @@
 			buildConfigurationList = B49DE8F02CBD9F08000C64F5 /* Build configuration list for PBXNativeTarget "EssentialFeedAppTests" */;
 			buildPhases = (
 				B49DE8D42CBD9F07000C64F5 /* Sources */,
-				B445A5B92CBFEBBC009B75EF /* ShellScript */,
 				B49DE8D52CBD9F07000C64F5 /* Frameworks */,
 				B49DE8D62CBD9F07000C64F5 /* Resources */,
 			);
@@ -247,43 +255,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B445A5B82CBFEBAA009B75EF /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n#echo \"Running SwiftFormat during tests...\"\nexport PATH=\"/opt/homebrew/bin:$PATH\"\nPROJECT_PATH=\"/Users/juancarlosmerlosalbarracin/Desktop/essential-feed-review/EssentialFeed\"\nchmod -R 777 \"$PROJECT_PATH\"\ncd \"$PROJECT_PATH\" || exit 1\n/opt/homebrew/bin/swiftformat \"$PROJECT_PATH\" --swiftversion 5.7 || exit 1\n\n#echo \"Formatted on $(date)\" > \"${SRCROOT}/swiftformat-output.txt\"\n";
-		};
-		B445A5B92CBFEBBC009B75EF /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n#echo \"Running SwiftFormat during tests...\"\nexport PATH=\"/opt/homebrew/bin:$PATH\"\nPROJECT_PATH=\"/Users/juancarlosmerlosalbarracin/Desktop/essential-feed-review/EssentialFeed\"\nchmod -R 777 \"$PROJECT_PATH\"\ncd \"$PROJECT_PATH\" || exit 1\n/opt/homebrew/bin/swiftformat \"$PROJECT_PATH\" --swiftversion 5.7 || exit 1\n\n#echo \"Formatted on $(date)\" > \"${SRCROOT}/swiftformat-output.txt\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B49DE8BE2CBD9F04000C64F5 /* Sources */ = {
