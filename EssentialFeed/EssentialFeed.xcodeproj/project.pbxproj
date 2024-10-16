@@ -317,13 +317,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B4031DA72C99ECD600D4163D /* Feed Image Loader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Feed Image Loader";
-			sourceTree = "<group>";
-		};
 		B4031DAA2C99ED1300D4163D /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,7 +571,6 @@
 			isa = PBXGroup;
 			children = (
 				B480DEFE2CA1DB9B00CF2E7D /* Feed Presentation */,
-				B4031DA72C99ECD600D4163D /* Feed Image Loader */,
 				B4031DAA2C99ED1300D4163D /* Feed UI */,
 			);
 			path = EssentialFeediOS;
