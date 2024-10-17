@@ -40,16 +40,10 @@ final class FeedLoaderWithFallbackCompositeTest: XCTestCase {
     let primaryLoader = LoaderStub(result: primaryResult)
     let fallbackLoader = LoaderStub(result: fallbackResult)
     let sut = FeedLoaderWithFallbackComposite(primary: primaryLoader, fallback: fallbackLoader)
-    trackMemoryLeaks(primaryLoader, file: file, line: line)
-    trackMemoryLeaks(fallbackLoader, file: file, line: line)
-    trackMemoryLeaks(sut, file: file, line: line)
+    trackForMemoryLeaks(primaryLoader, file: file, line: line)
+    trackForMemoryLeaks(fallbackLoader, file: file, line: line)
+    trackForMemoryLeaks(sut, file: file, line: line)
     return sut
-  }
-  
-  private func trackMemoryLeaks(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
-    addTeardownBlock { [weak instance] in
-      XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak", file: file, line: line)
-    }
   }
   
   private func expect(_ sut: FeedLoaderWithFallbackComposite,
