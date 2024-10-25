@@ -20,44 +20,29 @@ final class FeedLoaderCacheDecorator: FeedLoader {
   }
 }
 
-final class FeedLoaderCacheDecoratorTest: XCTestCase {
+final class FeedLoaderCacheDecoratorTest: FeedLoaderTestCase {
   
   func test_load_deliversFeedOnLoaderSuccess() {
     let feed = uniqueFeed()
-    let loader = FeedLoaderStub(result: .success(feed))
-    let sut = FeedLoaderCacheDecorator(decoratee: loader)
+    let sut = makeSUT(loadResult: .success(feed))
     
     expect(sut, toCompleteWith: .success(feed))
   }
   
   func test_load_deliversErrorOnLoaderError() {
-    let loader = FeedLoaderStub(result: .failure(anyNSError()))
-    let sut = FeedLoaderCacheDecorator(decoratee: loader)
+    let sut = makeSUT(loadResult: .failure(anyNSError()))
     
     expect(sut, toCompleteWith: .failure(anyNSError()))
   }
   
   // MARK: - Helpers
   
-  private func expect(_ sut: FeedLoader,
-                      toCompleteWith expectedResult: FeedLoader.Result,
-                      file: StaticString = #file, line: UInt = #line) {
-    let exp = expectation(description: "Wait for load to complete")
-    
-    sut.load { receivedResult in
-      switch (receivedResult, expectedResult) {
-        case let (.success(receivedFeed), .success(expectedFeed)):
-          XCTAssertEqual(receivedFeed, expectedFeed, file: file, line: line)
-          
-        case (.failure, .failure):
-          break
-          
-        default:
-          XCTFail("Expected \(expectedResult), got \(receivedResult) instead", file: file, line: line)
-      }
-      exp.fulfill()
-    }
-    wait(for: [exp], timeout: 1.0)
+  private func makeSUT(loadResult: FeedLoader.Result, file: StaticString = #filePath, line: UInt = #line) -> FeedLoader {
+    let loader = FeedLoaderStub(result: loadResult)
+    let sut = FeedLoaderCacheDecorator(decoratee: loader)
+    trackForMemoryLeaks(loader, file: file, line: line)
+    trackForMemoryLeaks(sut, file: file, line: line)
+    return sut
   }
 }
 
