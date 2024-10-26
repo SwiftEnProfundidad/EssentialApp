@@ -31,15 +31,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     let rootViewController = FeedUIComposer.feedComposeWith(
       feedLoader: FeedLoaderWithFallbackComposite(
-        primary: FeedLoaderCacheDecorator(
-          decoratee: remoteFeedLoader,
-          cache: localFeedLoader),
+        primary: remoteFeedLoader,
         fallback: localFeedLoader),
       imageLoader: FeedImageDataLoaderWithFallbackComposite(
-        primary: localImageLoader,
-        fallback: FeedImageDataLoaderCacheDecorator(
-          decoratee: remoteFeedImageDataLoader,
-          cache: localImageLoader)))
+        primary: remoteFeedImageDataLoader,
+        fallback: localImageLoader))
     
     window.rootViewController = rootViewController
     window.makeKeyAndVisible()
