@@ -26,7 +26,6 @@
 		B49505742CCD46FE00077CD5 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49505732CCD46FE00077CD5 /* FeedLoaderCacheDecorator.swift */; };
 		B4A137E52CC17B70005636D2 /* FeedLoaderCacheDecoratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A137E42CC17B70005636D2 /* FeedLoaderCacheDecoratorTest.swift */; };
 		B4AB7D2B2CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D282CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITests.swift */; };
-		B4AB7D2C2CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D292CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITestsLaunchTests.swift */; };
 		B4D849932CC21F2C00706127 /* XCTestCase+FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D849922CC21F2C00706127 /* XCTestCase+FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +84,6 @@
 		B49DE8D82CBD9F07000C64F5 /* EssentialFeedAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A137E42CC17B70005636D2 /* FeedLoaderCacheDecoratorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTest.swift; sourceTree = "<group>"; };
 		B4AB7D282CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAppUIAcceptanceUITests.swift; sourceTree = "<group>"; };
-		B4AB7D292CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAppUIAcceptanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B4D849922CC21F2C00706127 /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				B4AB7D282CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITests.swift */,
-				B4AB7D292CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITestsLaunchTests.swift */,
 			);
 			path = EssentialFeedAppUIAcceptanceUITests;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4AB7D2B2CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITests.swift in Sources */,
-				B4AB7D2C2CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +457,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,7 +486,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
