@@ -24,24 +24,16 @@
       "parallelizable" : false,
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "B4A4D8262C90494900E2646D",
-        "name" : "EssentialFeediOSTests"
-      }
-    },
-    {
-      "parallelizable" : false,
-      "target" : {
-        "containerPath" : "container:..\/EssentialFeedApp\/EssentialFeedApp.xcodeproj",
-        "identifier" : "B49DE8D72CBD9F07000C64F5",
-        "name" : "EssentialFeedAppTests"
+        "identifier" : "B45FE7DE2C5116A60020BCC1",
+        "name" : "EssentialFeedAPIEndToEndTests"
       }
     },
     {
       "parallelizable" : false,
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "B45FE7DE2C5116A60020BCC1",
-        "name" : "EssentialFeedAPIEndToEndTests"
+        "identifier" : "B436AC072C33CEF7007A22A7",
+        "name" : "EssentialFeedTests"
       }
     }
   ],

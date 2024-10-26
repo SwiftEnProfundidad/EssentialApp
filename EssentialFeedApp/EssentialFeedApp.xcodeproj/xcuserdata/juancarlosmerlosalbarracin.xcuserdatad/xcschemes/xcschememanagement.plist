@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EssentialFeedApp.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
 		<key>EssentialFeedAppTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +12,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>B494BB262CCD6BF200BE8A69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B49DE8C12CBD9F04000C64F5</key>
 		<dict>
 			<key>primary</key>
