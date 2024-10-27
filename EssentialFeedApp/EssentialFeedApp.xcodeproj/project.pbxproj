@@ -30,6 +30,7 @@
 		B4AB7D302CCE5CF1007DA015 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D2F2CCE5CF1007DA015 /* FeedImageDataLoaderCacheDecoratorTests.swift */; };
 		B4AB7D322CCE5EAA007DA015 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D312CCE5EAA007DA015 /* XCTestCase+FeedImageDataLoader.swift */; };
 		B4AB7D352CCE5EF4007DA015 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D342CCE5EF4007DA015 /* FeedImageDataLoaderSpy.swift */; };
+		B4AB7D382CCEB4C8007DA015 /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D372CCEB4C8007DA015 /* DebuggingSceneDelegate.swift */; };
 		B4D849932CC21F2C00706127 /* XCTestCase+FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D849922CC21F2C00706127 /* XCTestCase+FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		B4AB7D2F2CCE5CF1007DA015 /* FeedImageDataLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		B4AB7D312CCE5EAA007DA015 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		B4AB7D342CCE5EF4007DA015 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
+		B4AB7D372CCEB4C8007DA015 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 		B4D849922CC21F2C00706127 /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 			children = (
 				B41A9F052CC089BB005CFF5C /* AppDelegate.swift */,
 				B41A9F0B2CC089BB005CFF5C /* SceneDelegate.swift */,
+				B4AB7D372CCEB4C8007DA015 /* DebuggingSceneDelegate.swift */,
 				B41A9F1A2CC08C2C005CFF5C /* FeedLoaderWithFallbackComposite.swift */,
 				B41A9F232CC090C4005CFF5C /* FeedImageDataLoaderWithFallbackComposite.swift */,
 				B49505732CCD46FE00077CD5 /* FeedLoaderCacheDecorator.swift */,
@@ -369,6 +372,7 @@
 				B41A9F1B2CC08C2C005CFF5C /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				B4AB7D2E2CCE5C73007DA015 /* FeedImageDataLoaderCacheDecorator.swift in Sources */,
 				B49505742CCD46FE00077CD5 /* FeedLoaderCacheDecorator.swift in Sources */,
+				B4AB7D382CCEB4C8007DA015 /* DebuggingSceneDelegate.swift in Sources */,
 				B41A9F242CC090C4005CFF5C /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
