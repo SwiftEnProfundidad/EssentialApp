@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       .appendingPathComponent("essential-feed")
       .appendingPathExtension("sqlite")
     
-    if CommandLine.arguments.contains("-reset") {
+    if CommandLine.arguments.contains("--reset") {
       try? FileManager.default.removeItem(at: localStoreURL)
     }
     
