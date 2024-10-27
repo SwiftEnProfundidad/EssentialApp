@@ -94,6 +94,7 @@
 		B4AB7D312CCE5EAA007DA015 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		B4AB7D342CCE5EF4007DA015 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
 		B4AB7D372CCEB4C8007DA015 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
+		B4AB7D392CCEC512007DA015 /* EssentialFeedAppUIAcceptanceUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeedAppUIAcceptanceUITests.xctestplan; path = ../EssentialFeedAppUIAcceptanceUITests.xctestplan; sourceTree = "<group>"; };
 		B4D849922CC21F2C00706127 /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +187,7 @@
 		B49DE8B92CBD9F04000C64F5 = {
 			isa = PBXGroup;
 			children = (
+				B4AB7D392CCEC512007DA015 /* EssentialFeedAppUIAcceptanceUITests.xctestplan */,
 				B41A9F2C2CC092FA005CFF5C /* EssentialFeedApp */,
 				B41A9F2D2CC09333005CFF5C /* EssentialFeedAppTest */,
 				B4AB7D2A2CCD9CE1007DA015 /* EssentialFeedAppUIAcceptanceUITests */,
