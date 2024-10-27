@@ -9,21 +9,21 @@ import XCTest
 
 final class EssentialFeedAppUIAcceptanceUITests: XCTestCase {
   
-  func test_OnLaunch_displayRemoteNewsWhenCustomerHasConnectivity() {
+  func test_onLaunch_displayRemoteFeedWhenCustomerHasConnectivity() {
     let app = XCUIApplication()
-    app.launchArguments = ["--reset"]
+    app.launchArguments = ["--reset", "-connectivity", "online"]
     app.launch()
     
     let feedCells = app.cells.matching(identifier: "feed-image-cell")
-    XCTAssertEqual(feedCells.count, 22, "There should be 22 cells")
+    XCTAssertEqual(feedCells.count, 2, "There should be 2 cells")
     
     let firstImage = app.images.matching(identifier: "feed-image-view").firstMatch
     XCTAssertTrue(firstImage.exists)
   }
   
-  func test_onLaunch_displaysCachedRemoteNewsWhenCustomerHasNoConnectivity() {
+  func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
     let onlineApp = XCUIApplication()
-    onlineApp.launchArguments = ["--reset"]
+    onlineApp.launchArguments = ["--reset", "-connectivity", "online"]
     onlineApp.launch()
     
     let offlineApp = XCUIApplication()
@@ -31,13 +31,13 @@ final class EssentialFeedAppUIAcceptanceUITests: XCTestCase {
     offlineApp.launch()
     
     let cacheFeedCells = offlineApp.cells.matching(identifier: "feed-image-cell")
-    XCTAssertEqual(cacheFeedCells.count, 22, "There should be 22 cells")
+    XCTAssertEqual(cacheFeedCells.count, 2, "There should be 2 cells")
     
     let firstCachedImage = offlineApp.images.matching(identifier: "feed-image-view").firstMatch
     XCTAssertTrue(firstCachedImage.exists)
   }
   
-  func test_onLaunch_displaysEmptyNewsWhenCustomerHasNoConnectivityAndNoCache() {
+  func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
     let app = XCUIApplication()
     app.launchArguments = ["--reset", "-connectivity", "offline"]
     app.launch()
