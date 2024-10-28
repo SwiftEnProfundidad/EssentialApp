@@ -205,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B486DB4D2CCFED2300C3BFA4 /* UIImage+TestHelpers 2.swift */,
+				B486DB4B2CCFECFC00C3BFA4 /* FeedUIIntegrationTests.swift */,
 				B486DB392CCFECD600C3BFA4 /* FakeRefreshControl+TestHelpers 2.swift */,
 				B486DB3A2CCFECD600C3BFA4 /* FeedImageCell+TestHelpers.swift  2.swift */,
 				B486DB3B2CCFECD600C3BFA4 /* FeedViewController+TestHelpers.swift  2.swift */,
