@@ -32,6 +32,7 @@
 		B4AB7D352CCE5EF4007DA015 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D342CCE5EF4007DA015 /* FeedImageDataLoaderSpy.swift */; };
 		B4AB7D382CCEB4C8007DA015 /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB7D372CCEB4C8007DA015 /* DebuggingSceneDelegate.swift */; };
 		B4D849932CC21F2C00706127 /* XCTestCase+FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D849922CC21F2C00706127 /* XCTestCase+FeedLoader.swift */; };
+		B4DEEB022CCFC91800D72C5D /* SceneDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DEEB012CCFC91800D72C5D /* SceneDelegateTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		B4AB7D342CCE5EF4007DA015 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
 		B4AB7D372CCEB4C8007DA015 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 		B4D849922CC21F2C00706127 /* XCTestCase+FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedLoader.swift"; sourceTree = "<group>"; };
+		B4DEEB012CCFC91800D72C5D /* SceneDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				B41A9F172CC089BB005CFF5C /* FeedLoaderWithFallbackCompositeTest.swift */,
 				B4A137E42CC17B70005636D2 /* FeedLoaderCacheDecoratorTest.swift */,
 				B4AB7D2F2CCE5CF1007DA015 /* FeedImageDataLoaderCacheDecoratorTests.swift */,
+				B4DEEB012CCFC91800D72C5D /* SceneDelegateTest.swift */,
 			);
 			path = EssentialFeedAppTest;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B41A9F1E2CC08DF5005CFF5C /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
+				B4DEEB022CCFC91800D72C5D /* SceneDelegateTest.swift in Sources */,
 				B4AB7D302CCE5CF1007DA015 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				B4D849932CC21F2C00706127 /* XCTestCase+FeedLoader.swift in Sources */,
 				B41A9F272CC091C8005CFF5C /* XCTestCase+MemoryLeakTracking.swift in Sources */,

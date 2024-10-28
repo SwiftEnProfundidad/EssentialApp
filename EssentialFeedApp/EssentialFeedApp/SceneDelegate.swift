@@ -23,6 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     let window = UIWindow(windowScene: windowScene)
     
+    configureWindow(whith: window)
+  }
+  
+  func configureWindow(whith window: UIWindow)  {
     let remoteURL = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
     let remoteClient = makeRemoteClient()
     let remoteFeedLoader = RemoteFeedLoader(url: remoteURL, client: remoteClient)
@@ -44,7 +48,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
           decoratee: remoteFeedImageDataLoader,
           cache: localImageLoader)))
     
-    window.rootViewController = rootViewController
+    window.rootViewController = UINavigationController(rootViewController: rootViewController)
     window.makeKeyAndVisible()
     
     self.window = window
