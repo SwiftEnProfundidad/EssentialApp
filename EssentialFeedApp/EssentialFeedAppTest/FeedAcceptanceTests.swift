@@ -18,16 +18,24 @@ final class FeedAcceptanceTests: XCTestCase {
     feed.simulateUserInitiatedFeedReload()
     
     XCTAssertEqual(feed.numberOfRenderedFeedImageViews(), 2)
-    XCTAssertEqual(feed.renderedFeedImageData(at: 0), self.makeImageData())
-    XCTAssertEqual(feed.renderedFeedImageData(at: 1), self.makeImageData())
+    XCTAssertEqual(feed.renderedFeedImageData(at: 0), makeImageData())
+    XCTAssertEqual(feed.renderedFeedImageData(at: 1), makeImageData())
   }
 
   func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
+    let sharedStore = InMemoryStore.empty
+    let onlineFeed = launch(httpClient: .online(response), store: sharedStore)
     
-  }
-  
-  func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
+    onlineFeed.simulateUserInitiatedFeedReload()
+    onlineFeed.simulatedFeedImageViewVisible(at: 0)
+    onlineFeed.simulatedFeedImageViewVisible(at: 1)
     
+    let offlineFeed = launch(httpClient: .offline, store: sharedStore)
+    offlineFeed.simulateUserInitiatedFeedReload()
+    
+    XCTAssertEqual(offlineFeed.numberOfRenderedFeedImageViews(), 2)
+    XCTAssertEqual(offlineFeed.renderedFeedImageData(at: 0), nil) // change nil to makeImageData()
+    XCTAssertEqual(offlineFeed.renderedFeedImageData(at: 1), nil) // change nil to makeImageData()
   }
   
   // MARK: - Helpers
