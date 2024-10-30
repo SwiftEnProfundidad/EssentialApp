@@ -51,8 +51,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let remoteURL = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
     let remoteFeedLoader = RemoteFeedLoader(url: remoteURL, client: httpClient)
     let remoteFeedImageDataLoader = RemoteFeedImageDataLoader(client: httpClient)
-    
     let localImageLoader = LocalFeedImageDataLoader(store: store)
+    
+    let imageLoader = FeedImageDataLoaderWithFallbackComposite(
+      primary: localImageLoader,
+      fallback: FeedImageDataLoaderCacheDecorator(
+        decoratee: remoteFeedImageDataLoader,
+        cache: localImageLoader
+      )
+    )
     
     let rootViewController = FeedUIComposer.feedComposedWith(
       feedLoader: FeedLoaderWithFallbackComposite(
@@ -60,11 +67,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
           decoratee: remoteFeedLoader,
           cache: localFeedLoader),
         fallback: localFeedLoader),
-      imageLoader: FeedImageDataLoaderWithFallbackComposite(
-        primary: remoteFeedImageDataLoader,
-        fallback: FeedImageDataLoaderCacheDecorator(
-          decoratee: remoteFeedImageDataLoader,
-          cache: localImageLoader)))
+      imageLoader: imageLoader)
     
     window.rootViewController = UINavigationController(rootViewController: rootViewController)
     window.makeKeyAndVisible()
