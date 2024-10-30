@@ -21,7 +21,7 @@ final class FeedAcceptanceTests: XCTestCase {
     XCTAssertEqual(feed.renderedFeedImageData(at: 0), makeImageData())
     XCTAssertEqual(feed.renderedFeedImageData(at: 1), makeImageData())
   }
-
+  
   func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
     let sharedStore = InMemoryStore.empty
     let onlineFeed = launch(httpClient: .online(response), store: sharedStore)
@@ -38,6 +38,12 @@ final class FeedAcceptanceTests: XCTestCase {
     XCTAssertEqual(offlineFeed.renderedFeedImageData(at: 1), nil) // change nil to makeImageData()
   }
   
+  func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
+    let feed = launch(httpClient: .offline, store: .empty)
+    
+    XCTAssertEqual(feed.numberOfRenderedFeedImageViews(), 0)
+  }
+  
   // MARK: - Helpers
   
   private func launch(httpClient: HTTPClientStub = .offline, store: InMemoryStore = .empty) -> FeedViewController {
@@ -47,7 +53,7 @@ final class FeedAcceptanceTests: XCTestCase {
     let nav = sut.window?.rootViewController as? UINavigationController
     return nav?.topViewController as! FeedViewController
   }
-
+  
   
   private func response(for url: URL) -> (Data, HTTPURLResponse) {
     let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)!
