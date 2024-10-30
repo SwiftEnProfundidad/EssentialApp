@@ -21,13 +21,6 @@
       }
     },
     {
-      "target" : {
-        "containerPath" : "container:EssentialFeedApp.xcodeproj",
-        "identifier" : "B494BB262CCD6BF200BE8A69",
-        "name" : "EssentialFeedAppUIAcceptanceUITests"
-      }
-    },
-    {
       "parallelizable" : false,
       "target" : {
         "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
