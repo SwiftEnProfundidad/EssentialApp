@@ -15,7 +15,7 @@
     {
       "parallelizable" : false,
       "target" : {
-        "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+        "containerPath" : "container:EssentialFeed.xcodeproj",
         "identifier" : "B436AC072C33CEF7007A22A7",
         "name" : "EssentialFeedTests"
       }
