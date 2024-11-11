@@ -122,5 +122,3 @@ private extension FeedViewController {
     display(cells)
   }
 }
-
-#warning("TODO: - PÁGINA 1387 --- `COMMIT: Obtenemos empty feed y feed with content sin ejecutar la aplicación y se añade también a la historia de git. Hagamos commit: “Record feed with content snapshot”`")
