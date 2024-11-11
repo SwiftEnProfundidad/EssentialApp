@@ -25,6 +25,13 @@ final class FeedSnapshotTest: XCTestCase {
     record(snapshot: sut.snapshot(), name: "FEED_WITH_CONTENT")
   }
   
+  func test_feedWithErrorMessage() {
+    let sut = makeSUT()
+    
+    sut.display(.error(message: "This is a\nmulti-line\nerror a message"))
+    record(snapshot: sut.snapshot(), name: "FEED_WITH_ERROR_MESSAGE")
+  }
+  
   // MARK: - Helpers
   
   private func makeSUT() -> FeedViewController {
@@ -47,13 +54,12 @@ final class FeedSnapshotTest: XCTestCase {
         image: UIImage.make(withColor: .red)
       ),
       ImageStub(
-        description: "Garth Pier is a Grade II listed structure in San               Francisco. The structure, which was named after the garage that             leads to the Pier, was built in 1906.",
+        description: "Garth Pier is a Grade II listed structure in San Francisco. The structure, which was named after the garage that leads to the Pier, was built in 1906.",
         location: "Garth Pier\nSan Francisco",
         image: UIImage.make(withColor: .green)
       )
     ]
   }
-  
   
   private func record(snapshot: UIImage, name: String, file: StaticString = #file, line: UInt = #line) {
     guard let snapshotData = snapshot.pngData() else {
@@ -75,8 +81,6 @@ final class FeedSnapshotTest: XCTestCase {
       XCTFail("Failed to record snapshot vith error: \(error)", file: file, line: line)
     }
   }
-  
-  
 }
 
 private class ImageStub: FeedImageCellControllerDelegate {
@@ -118,3 +122,5 @@ private extension FeedViewController {
     display(cells)
   }
 }
+
+#warning("TODO: - PÁGINA 1387 --- `COMMIT: Obtenemos empty feed y feed with content sin ejecutar la aplicación y se añade también a la historia de git. Hagamos commit: “Record feed with content snapshot”`")

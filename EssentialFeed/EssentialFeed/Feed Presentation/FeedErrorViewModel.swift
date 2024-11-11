@@ -8,11 +8,11 @@
 public struct FeedErrorViewModel {
     public let errorMessage: String?
 
-    static var noError: FeedErrorViewModel {
+    public static var noError: FeedErrorViewModel {
         FeedErrorViewModel(errorMessage: nil)
     }
 
-    static func error(message: String) -> FeedErrorViewModel {
+    public static func error(message: String) -> FeedErrorViewModel {
         FeedErrorViewModel(errorMessage: message)
     }
 }
