@@ -111,13 +111,6 @@
 			remoteGlobalIDString = B49DE8D82CBD9F07000C64F5;
 			remoteInfo = EssentialFeedAppTests;
 		};
-		B40430602CE3F5B5002FA003 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B40430532CE3F5B4002FA003 /* EssentialFeedApp.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B494BB272CCD6BF200BE8A69;
-			remoteInfo = EssentialFeedAppUIAcceptanceUITests;
-		};
 		B436AC0A2C33CEF7007A22A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B436ABF72C33CEF7007A22A7 /* Project object */;
@@ -357,7 +350,6 @@
 			children = (
 				B404305D2CE3F5B5002FA003 /* EssentialFeedApp.app */,
 				B404305F2CE3F5B5002FA003 /* EssentialFeedAppTests.xctest */,
-				B40430612CE3F5B5002FA003 /* EssentialFeedAppUIAcceptanceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -852,13 +844,6 @@
 			fileType = wrapper.cfbundle;
 			path = EssentialFeedAppTests.xctest;
 			remoteRef = B404305E2CE3F5B5002FA003 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B40430612CE3F5B5002FA003 /* EssentialFeedAppUIAcceptanceUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EssentialFeedAppUIAcceptanceUITests.xctest;
-			remoteRef = B40430602CE3F5B5002FA003 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
