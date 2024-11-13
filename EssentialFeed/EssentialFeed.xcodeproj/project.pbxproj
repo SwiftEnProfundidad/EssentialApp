@@ -97,20 +97,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B404305C2CE3F5B5002FA003 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B40430532CE3F5B4002FA003 /* EssentialFeedApp.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B49DE8C22CBD9F04000C64F5;
-			remoteInfo = EssentialFeedApp;
-		};
-		B404305E2CE3F5B5002FA003 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B40430532CE3F5B4002FA003 /* EssentialFeedApp.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B49DE8D82CBD9F07000C64F5;
-			remoteInfo = EssentialFeedAppTests;
-		};
 		B436AC0A2C33CEF7007A22A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B436ABF72C33CEF7007A22A7 /* Project object */;
@@ -164,7 +150,6 @@
 
 /* Begin PBXFileReference section */
 		B4031DA82C99ECE400D4163D /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
-		B40430532CE3F5B4002FA003 /* EssentialFeedApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EssentialFeedApp.xcodeproj; path = ../EssentialFeedApp/EssentialFeedApp.xcodeproj; sourceTree = SOURCE_ROOT; };
 		B41130782CBD1A13001A3117 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		B41130802CBD1F99001A3117 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 		B41130822CBD1FC3001A3117 /* FeedErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorView.swift; sourceTree = "<group>"; };
@@ -345,15 +330,6 @@
 			path = "Feed UI";
 			sourceTree = "<group>";
 		};
-		B40430572CE3F5B4002FA003 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B404305D2CE3F5B5002FA003 /* EssentialFeedApp.app */,
-				B404305F2CE3F5B5002FA003 /* EssentialFeedAppTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B41130772CBD19B1001A3117 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,7 +477,6 @@
 		B4770EB02C90DA72003302F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B40430532CE3F5B4002FA003 /* EssentialFeedApp.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -813,12 +788,6 @@
 			);
 			productRefGroup = B436AC012C33CEF7007A22A7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B40430572CE3F5B4002FA003 /* Products */;
-					ProjectRef = B40430532CE3F5B4002FA003 /* EssentialFeedApp.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B436ABFF2C33CEF7007A22A7 /* EssentialFeed */,
@@ -830,23 +799,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		B404305D2CE3F5B5002FA003 /* EssentialFeedApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = EssentialFeedApp.app;
-			remoteRef = B404305C2CE3F5B5002FA003 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B404305F2CE3F5B5002FA003 /* EssentialFeedAppTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EssentialFeedAppTests.xctest;
-			remoteRef = B404305E2CE3F5B5002FA003 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B436ABFE2C33CEF7007A22A7 /* Resources */ = {
