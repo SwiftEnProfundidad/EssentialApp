@@ -12,7 +12,7 @@ import XCTest
 
 final class SceneDelegateTest: XCTestCase {
 
-  func test_sceneWillConnectToSession_configurationRootViewController() {
+  func test_configureWindow_configuresRootViewController() {
     let sut = SceneDelegate()
     sut.configureWindow(whith: UIWindow())
 
