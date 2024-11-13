@@ -26,16 +26,23 @@ final class SceneDelegateTest: XCTestCase {
   }
 
   func test_configureWindow_setWindowAsKeyAndVisible() {
-    let window = UIWindow()
-    window.windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-
+    let window = UIWindowSpy()
     let sut = SceneDelegate()
-    sut.window = window
 
+    sut.window = window
     sut.configureWindow(whith: window)
 
-    XCTAssertTrue(window.isKeyWindow, "Expected window to be the key window")
-    XCTAssertFalse(window.isHidden, "Expected window to be visible")
+    XCTAssertEqual(window.makeKeyAndVisibleCallCount, 1, "Expected to make window key and visible")
+  }
+
+  // MARK: - Helpers
+
+  private class UIWindowSpy: UIWindow {
+    var makeKeyAndVisibleCallCount = 0
+
+    override func makeKeyAndVisible() {
+      makeKeyAndVisibleCallCount += 1
+    }
   }
 
 }
