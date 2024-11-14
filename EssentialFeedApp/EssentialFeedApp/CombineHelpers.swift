@@ -5,14 +5,14 @@
 //  Created by Juan Carlos merlos albarracin on 14/11/24.
 //
 
-import Foundation
 import Combine
 import EssentialFeed
+import Foundation
 
-public extension FeedImageDataLoader {
-  typealias Publisher = AnyPublisher<Data, Error>
+extension FeedImageDataLoader {
+  public typealias Publisher = AnyPublisher<Data, Error>
 
-  func loadImageDataPublisher(from url: URL) -> Publisher {
+  public func loadImageDataPublisher(from url: URL) -> Publisher {
     var task: FeedImageDataLoaderTask?
 
     return Deferred {
@@ -71,5 +71,59 @@ extension Publisher {
 extension Publisher {
   func dispatchOnMainQueue() -> AnyPublisher<Output, Failure> {
     return receive(on: DispatchQueue.inmediateWhenOnMainQueueScheduler).eraseToAnyPublisher()
+  }
+}
+
+extension DispatchQueue {
+  static var inmediateWhenOnMainQueueScheduler: InmediateWhenOnMainQueueScheduler {
+    InmediateWhenOnMainQueueScheduler.shared
+  }
+
+  struct InmediateWhenOnMainQueueScheduler: Scheduler {
+    typealias SchedulerTimeType = DispatchQueue.SchedulerTimeType
+    typealias SchedulerOptions = DispatchQueue.SchedulerOptions
+
+    var now: DispatchQueue.SchedulerTimeType {
+      DispatchQueue.main.now
+    }
+
+    var minimumTolerance: DispatchQueue.SchedulerTimeType.Stride {
+      DispatchQueue.main.minimumTolerance
+    }
+
+    static let shared = Self()
+
+    private static let key = DispatchSpecificKey<UInt8>()
+    private static let value = UInt8.max
+
+    private init() {
+      DispatchQueue.main.setSpecific(key: Self.key, value: Self.value)
+    }
+
+    private func isMainQueue() -> Bool {
+      return DispatchQueue.getSpecific(key: Self.key) == Self.value
+    }
+
+    func schedule(options: SchedulerOptions?, _ action: @escaping () -> Void) {
+      guard isMainQueue() else {
+        return DispatchQueue.main.schedule(options: options, action)
+      }
+
+      // The main queue is guaranteed to be running on the main thread
+      // The main threa is not guaranteed to be running the main queue
+
+      action()
+    }
+
+    func schedule(after date: SchedulerTimeType, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Void) {
+      DispatchQueue.main.schedule(after: date, tolerance: tolerance, options: options, action)
+    }
+
+    func schedule(
+      after date: SchedulerTimeType, interval: SchedulerTimeType.Stride, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?,
+      _ action: @escaping () -> Void
+    ) -> any Cancellable {
+      DispatchQueue.main.schedule(after: date, interval: interval, tolerance: tolerance, options: options, action)
+    }
   }
 }
